@@ -14,7 +14,7 @@ The MJ Chatbot app is the result of my passion for building intelligent conversa
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Inspiration](inspiration-and-technical-challenges)
+- [Inspiration](#inspiration-and-technical-challenges)
 - [What next](future-abilities-to-add)
 - [Related Projects](#related-projects)
 - [License](#license)
