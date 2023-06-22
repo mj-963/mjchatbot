@@ -1,11 +1,11 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:mj/constants.dart';
 import 'package:mj/splash.dart';
 
 void main() {
+  //This is the start point of the app that takes in the app to be runned (Myapp in this case)
   runApp(const MyApp());
 }
 
@@ -14,17 +14,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //This returns a material app to runApp function
     return const MaterialApp(
+      //Material app renders a widget called fullscreen image to the ui
       home: FullScreenImage(imageUrl: "assets/images/mjmj.png"),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
+// A function to generate response from the ai model, it takes in prompt as the user query
 Future<String> generateResponse(String prompt) async {
   var apiKey = apikey;
 
   var url = Uri.https("api.openai.com", "/v1/chat/completions");
+  //This receives the response from the ai model using the http package to send a post request to the api
   final response = await http.post(
     url,
     headers: {
@@ -58,6 +62,6 @@ Future<String> generateResponse(String prompt) async {
 
   // Do something with the response
   Map<String, dynamic> newresponse = jsonDecode(response.body);
-
+//here we turn the response to a json and pick out the relevant parameter which is the ais message content
   return newresponse['choices'][0]['message']['content'];
 }

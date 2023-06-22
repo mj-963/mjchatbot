@@ -8,6 +8,7 @@ class FullScreenImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //This returns a scaffold widget to the ui, the body of the scaffold shows a full screen image
     return Scaffold(
       body: Center(
         child: Hero(
@@ -21,6 +22,8 @@ class FullScreenImage extends StatelessWidget {
           ),
         ),
       ),
+
+      //A floating action button to take the user to the chat page using navigation.push
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,

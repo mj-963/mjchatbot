@@ -1,6 +1,6 @@
 # mj
 
-A new Flutter project.
+Mj is a revolutionary chatbot app designed to provide personalized customer service and support. With its advanced AI capabilities, mj can answer complex queries in real-time and provide tailored solutions to users with its intuitive interface. It is the perfect solution for businesses looking to enhance customer satisfaction and streamline their operations.
 
 ## Getting Started
 

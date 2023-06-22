@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'model.dart';
 import 'constants.dart';
 import 'main.dart';
-import 'chat widget.dart';
+import 'chat_widget.dart';
 
+//This is the chatpage that renders the chat ui
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
 
@@ -14,7 +15,9 @@ class ChatPage extends StatefulWidget {
 List<String> lmessage = ['hello', 'hi'];
 
 class _ChatPageState extends State<ChatPage> {
+  //A text controller to control the user type-ins
   final _textController = TextEditingController();
+  //This scroll controller controls how the page scrolls
   final _scrollController = ScrollController();
   final List<ChatMessage> _messages = [];
   late bool isLoading;
@@ -45,8 +48,10 @@ class _ChatPageState extends State<ChatPage> {
         child: Column(
           children: [
             Expanded(
+              //This builds where the list of messages are displayed
               child: _buildList(),
             ),
+            //This renders the visibility of the loading widget
             Visibility(
               visible: isLoading,
               child: const Padding(
@@ -60,6 +65,7 @@ class _ChatPageState extends State<ChatPage> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
+                  //Inside this row widget we build the input widget and the submit button
                   _buildInput(),
                   _buildSubmit(),
                 ],
@@ -71,6 +77,7 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 
+//This returns a submit button widget that controls what happens when a user submit a query
   Widget _buildSubmit() {
     return Visibility(
       visible: !isLoading,
@@ -125,6 +132,7 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 
+//this function returns the input widget where the user can type inputsand query the chatbot
   Expanded _buildInput() {
     return Expanded(
       child: TextField(
@@ -193,6 +201,7 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 
+//This list view  controls how each message is rendered on the ui
   ListView _buildList() {
     return ListView.builder(
       controller: _scrollController,

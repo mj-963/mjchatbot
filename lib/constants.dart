@@ -6,25 +6,30 @@ import 'dart:convert';
 
 String apikey = "";
 
+//This variables holds the colors for the widgets
 const backgroundColor = Color(0xff040622);
 const botBackgroundColor = Color(0XFF65F5FD);
 
+//this returns the current date to the model
 String date() {
   final now = DateTime.now();
   String date = DateFormat('yMd').format(now); // 28/03/2020
   return date;
 }
 
+//This returns the current time to the model
 String time() {
   final now = DateTime.now();
   String time = DateFormat.Hm().format(now);
   return time;
 }
 
+//This returns the last message sent to the ai for reference
 String lastMessage() {
   return lmessage[lmessage.length - 2];
 }
 
+// this a chat history model that holds if its user or model
 class ChatHistory {
   String user = '';
   String you = '';
@@ -32,9 +37,11 @@ class ChatHistory {
   ChatHistory({this.user = '', this.you = ''});
 }
 
+//This variable holds the previous chat history
 List<ChatHistory> previousChat = [];
 List<String> pchats = [];
 
+// this is the function that gets the chat history when the ai needs it
 String getChatHistory() {
   for (var element in previousChat) {
     pchats.add("{ 'User': '${element.user}' 'MJ': '${element.you}'}");
@@ -50,6 +57,7 @@ String getChatHistory() {
   return "{$joinedStrings}";
 }
 
+// This functions gets the latest news from the news api when needed
 Future<List<String>> getNewsFromAPI(
     {String apiKey = ""}) async {
   List<String> news = [];
@@ -69,6 +77,7 @@ Future<List<String>> getNewsFromAPI(
   return news;
 }
 
+// returns current news to the model
 String currentNews() {
   List<String> newsArticles = [];
 
