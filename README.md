@@ -91,7 +91,7 @@ Before installing MJ Chatbot, ensure that you have the following prerequisites:
 
 ## Usage
 
-https://github.com/mj-963/mjchatbot/assets/87059519/c81155fb-fcc8-42ea-8861-dfb1c6e24517
+https://github.com/mj-963/mjchatbot/assets/87059519/2f948334-b7ea-42f6-a9f3-aa7981807bf0
 
 1. Launch the MJ Chatbot app on your device.
 2. You will be greeted with a welcome/introduction page.
