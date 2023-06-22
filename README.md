@@ -1,10 +1,10 @@
 # mj
 
+<img width="3000" alt="Scene(2)" src="https://github.com/mj-963/mjchatbot/assets/87059519/83abbc5a-487a-4831-b324-1ee88e7a5fa8">
+
 Mj is a revolutionary chatbot app designed to provide personalized customer service and support. With its advanced AI capabilities, mj can answer complex queries in real-time and provide tailored solutions to users with its intuitive interface. It is the perfect solution for businesses looking to enhance customer satisfaction and streamline their operations.
 
 # Introduction
-<img width="3000" alt="Scene(2)" src="https://github.com/mj-963/mjchatbot/assets/87059519/83abbc5a-487a-4831-b324-1ee88e7a5fa8">
-
 The MJ Chatbot app is the result of my passion for building intelligent conversational agents and my interest in Flutter as a cross-platform development framework. This project allowed me to explore the capabilities of the ChatGPT-3 AI model and create an application that provides users with a seamless and engaging chatbot experience.
 
 ## Table of Contents
